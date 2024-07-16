@@ -284,7 +284,7 @@ Rectangle {
                     setupComplete:      modelData.setupComplete
                     buttonGroup:     setupButtonGroup
                     text:               modelData.name
-                    visible:            modelData.setupSource.toString() !== ""
+                    visible:            modelData.setupSource.toString() !== "" && modelData.name !== "Frame" && modelData.name !== "Tuning"
                     Layout.fillWidth:   true
                     onClicked:          showVehicleComponentPanel(componentUrl)
 

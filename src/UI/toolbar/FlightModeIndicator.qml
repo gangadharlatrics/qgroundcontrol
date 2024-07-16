@@ -132,7 +132,11 @@ RowLayout {
 
                 RowLayout {
                     spacing: ScreenTools.defaultFontPixelWidth
-                    visible: editMode || !hiddenFlightModesList.find(item => { return item === modelData } )
+                    visible: (editMode || !hiddenFlightModesList.find(item => { return item === modelData } )) && (modelData === "Auto"
+                                                                                                                                      || modelData === "Loiter"
+                                                                                                                                      || modelData === "RTL"
+                                                                                                                                      || modelData === "Land"
+                                                                                                                                      || modelData === "Altitude Hold")
 
                     QGCButton {
                         id:                 modeButton

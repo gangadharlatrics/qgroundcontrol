@@ -55,12 +55,12 @@ ListModel {
         pageVisible: function() { return true }
     }
 
-    ListElement {
-        name: qsTr("Comm Links")
-        url: "/qml/LinkSettings.qml"
-        iconUrl: "qrc:/InstrumentValueIcons/usb.svg"
-        pageVisible: function() { return true }
-    }
+    // ListElement {
+    //     name: qsTr("Comm Links")
+    //     url: "/qml/LinkSettings.qml"
+    //     iconUrl: "qrc:/InstrumentValueIcons/usb.svg"
+    //     pageVisible: function() { return true }
+    // }
 
     ListElement {
         name: qsTr("Maps")
@@ -88,19 +88,19 @@ ListModel {
         pageVisible: function() { return true }
     }
 
-    ListElement {
-        name: qsTr("Console")
-        url: "/qml/QGroundControl/Controls/AppMessages.qml"
-        iconUrl: "qrc:/InstrumentValueIcons/conversation.svg"
-        pageVisible: function() { return true }
-    }
+    // ListElement {
+    //     name: qsTr("Console")
+    //     url: "/qml/QGroundControl/Controls/AppMessages.qml"
+    //     iconUrl: "qrc:/InstrumentValueIcons/conversation.svg"
+    //     pageVisible: function() { return true }
+    // }
 
-    ListElement {
-        name: qsTr("Help")
-        url: "/qml/HelpSettings.qml"
-        iconUrl: "qrc:/InstrumentValueIcons/question.svg"
-        pageVisible: function() { return true }
-    }
+    // ListElement {
+    //     name: qsTr("Help")
+    //     url: "/qml/HelpSettings.qml"
+    //     iconUrl: "qrc:/InstrumentValueIcons/question.svg"
+    //     pageVisible: function() { return true }
+    // }
 
     ListElement {
         name: qsTr("Mock Link")

@@ -93,13 +93,13 @@ SettingsPage {
             property Fact _showDumbCameraControl: _flyViewSettings.showSimpleCameraControl
         }
 
-        FactCheckBoxSlider {
-            Layout.fillWidth:   true
-            text:               qsTr("Update return to home position based on device location.")
-            fact:               _updateHomePosition
-            visible:            _updateHomePosition.visible
-            property Fact _updateHomePosition: _flyViewSettings.updateHomePosition
-        }
+        // FactCheckBoxSlider {
+        //     Layout.fillWidth:   true
+        //     text:               qsTr("Update return to home position based on device location.")
+        //     fact:               _updateHomePosition
+        //     visible:            _updateHomePosition.visible
+        //     property Fact _updateHomePosition: _flyViewSettings.updateHomePosition
+        // }
     }
 
     SettingsGroupLayout {
@@ -129,36 +129,36 @@ SettingsPage {
         }
     }
 
-    SettingsGroupLayout {
-        Layout.fillWidth:       true
-        Layout.preferredWidth:  ScreenTools.defaultFontPixelWidth * 35
-        heading:                qsTr("Custom MAVLink Actions")
-        headingDescription:     qsTr("Custom action JSON files should be created in the '%1' folder.").arg(QGroundControl.settingsManager.appSettings.customActionsSavePath)
+    // SettingsGroupLayout {
+    //     Layout.fillWidth:       true
+    //     Layout.preferredWidth:  ScreenTools.defaultFontPixelWidth * 35
+    //     heading:                qsTr("Custom MAVLink Actions")
+    //     headingDescription:     qsTr("Custom action JSON files should be created in the '%1' folder.").arg(QGroundControl.settingsManager.appSettings.customActionsSavePath)
 
-        LabelledComboBox {
-            Layout.fillWidth:   true
-            label:              qsTr("Fly View Custom Actions")
-            model:              customActionList()
-            onActivated:        (index) => index == 0 ? _customMavlinkActionsSettings.flyViewActionsFile.rawValue = "" : _customMavlinkActionsSettings.flyViewActionsFile.rawValue = comboBox.currentText
+    //     LabelledComboBox {
+    //         Layout.fillWidth:   true
+    //         label:              qsTr("Fly View Custom Actions")
+    //         model:              customActionList()
+    //         onActivated:        (index) => index == 0 ? _customMavlinkActionsSettings.flyViewActionsFile.rawValue = "" : _customMavlinkActionsSettings.flyViewActionsFile.rawValue = comboBox.currentText
 
-            Component.onCompleted: {
-                var index = comboBox.find(_customMavlinkActionsSettings.flyViewActionsFile.valueString)
-                comboBox.currentIndex = index == -1 ? 0 : index
-            }
-        }
+    //         Component.onCompleted: {
+    //             var index = comboBox.find(_customMavlinkActionsSettings.flyViewActionsFile.valueString)
+    //             comboBox.currentIndex = index == -1 ? 0 : index
+    //         }
+    //     }
 
-        LabelledComboBox {
-            Layout.fillWidth:   true
-            label:              qsTr("Joystick Custom Actions")
-            model:              customActionList()
-            onActivated:        (index) => index == 0 ? _customMavlinkActionsSettings.joystickActionsFile.rawValue = "" : _customMavlinkActionsSettings.joystickActionsFile.rawValue = comboBox.currentText
+    //     LabelledComboBox {
+    //         Layout.fillWidth:   true
+    //         label:              qsTr("Joystick Custom Actions")
+    //         model:              customActionList()
+    //         onActivated:        (index) => index == 0 ? _customMavlinkActionsSettings.joystickActionsFile.rawValue = "" : _customMavlinkActionsSettings.joystickActionsFile.rawValue = comboBox.currentText
 
-            Component.onCompleted: {
-                var index = comboBox.find(_customMavlinkActionsSettings.joystickActionsFile.valueString)
-                comboBox.currentIndex = index == -1 ? 0 : index
-            }
-        }
-    }
+    //         Component.onCompleted: {
+    //             var index = comboBox.find(_customMavlinkActionsSettings.joystickActionsFile.valueString)
+    //             comboBox.currentIndex = index == -1 ? 0 : index
+    //         }
+    //     }
+    // }
 
     SettingsGroupLayout {
         Layout.fillWidth:   true
